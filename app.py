@@ -32,7 +32,7 @@ def submit():
     response = requests.post("https://barcode.tombs.rip/api/action/scan?apikey=kJSvfMoXiuhZ5GgbIDzB6ty4jrEWc9", headers=headers, data=data)
 
     if response.ok:
-        result_label.config(text=f"Data sent successfully: {response.text}")
+        result_label.config(text=f"Data sent successfully")
     else:
         result_label.config(text=f"Error sending data: {response.status_code}")
 
